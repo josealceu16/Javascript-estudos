@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--pedir para o usuário digitar um valor 
+        mostrar a tabuada de de 1 à 1000
+        toda informação que vem do usuário é uma string-->
+    <h1>Tabuada</h1>
+    <button onclick="mostrartabuada()">Mostrar tabuada</button>
+    <button>Limpar tabuada</button>
+    <div id="tabuada"></div>
+    <script>
+        const numbers = document.getElementById("tabuada")
+        function mostrartabuada() {
+            numbers.innerHTML = prompt("Digite um número...")
+            numbers = parseInt(numbers)
+            let num1 = 1;
+            while (num1 <= 1000) {
+                document.write(`${numbers} + ${num1} = ${(numbers + num1)}<br>  `)
+                num1++
+            }
+            num1 = 1;
+            while (num1 <= 1000) {
+                document.write(`${numbers} - ${num1} = ${(numbers - num1)}<br>  `)
+                num1++
+            }
+            num1 = 1;
+            while (num1 <= 1000) {
+                document.write(`${numbers} X ${num1} = ${(numbers * num1)}<br>  `)
+                num1++
+            }
+            num1 = 1;
+            while (num1 <= 1000) {
+                document.write(`${numbers} / ${num1} = ${(numbers / num1)}<br>  `)
+                num1++
+            }
+            console.log(mostrartabuada())
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //utilizando o comando prompt("") consigo transmitir para o usuário uma pergunta. 
+
+        /*let n = prompt("Digite o seu nome.")
+        document.write(`Olá, ${n}`);*/
+
+        /*consigo fazer com que meu usuário responda primeiro a pergunta
+        para depois aparecer na tela o conteúdo.*/
+
+        // da mesma maneira eu poderia pedir um numero para fazer a tabuada. Veja:
+
+        /*let num1 = prompt("Digite um número.")
+        document.write(`1 X ${num1} = ${(1 * num1)}<br>`);
+        document.write(`2 X ${num1} = ${(2 * num1)}<br>`);
+        */ // da seguinte maneira da para criar uma tabuada, só que, agora vamos para algo mais pratico, utilizando o loop.
+
+        let n = prompt("Digite um número")
+        let valor = 1;
+        while (valor <= 10) {
+            document.write(`${valor} X ${n} = ${(valor * n)}<br>`)
+            valor++
+        }
+        /*quando eu termino o loop devo colocar a variavel do loop com o ++
+        assim meu browser vai indentificar como false e vai parar, senão travaria meu pc.*/
+
+        // utilizando o "for" com a mesma ideia do "while"
+        for (let n1 = 1; n1 <= 10; n1++) {
+            document.write(`${n1} X ${n} = ${(n * n1)} <br>`)
+        }
+
+        // OBS.!! se eu fosse utilizar o while ao menos uma vez no meu código eu utilizaria o "do while"
+
+        let valor1 = 1;
+        do {
+            document.write(`${n} X ${valor1} = ${(n * valor1)}<br>  `)
+            valor1++
+        } while (valor1 <= 10)
+    </script>
+</body>
+
+</html>

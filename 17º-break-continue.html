@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // utilizamos o break quando queremos sair do loop. Veja a condição utilizando-o...
+        let valor = prompt("Digite um número.")
+        let num = 1;
+        do {
+            if (valor > 10) {
+                alert("Digitou um número maior que 10!")
+                break
+            }
+            document.write(`${valor} X ${num} = ${(valor * num)}<br>`)
+            num++
+        } while (num <= 10)
+        document.write("Saiu do loop do while <br>")
+        /* utilizando o 'alert' voce coloca u;ma mensagem na tela do usuário para ele apertar em ok,
+        se o que ele digitou está nas condições.*/
+        /* se eu quero que a minha tabuada seja até 10, eu uso um if com um alert como mensagem e se aquele meu if
+        estiver correto vai me entregar um break para que pare de rodar o código.*/
+
+        for (let num = 1; num <= 10; num++) {
+            if (num === 5) {
+                continue
+            }
+            document.write(`${valor} X ${num} = ${(valor * num)}<br>`)
+            /* no exemplo do for o que que aconteceu? 
+            eu fiz com que quando meu usuário digitasse o número assim que chegasse no 5, pulasse para o 6.
+            um exemplo prático de como podemos usar o "continue"
+            */
+        }
+        document.write("Saiu do loop for")
+    </script>
+</body>
+
+</html>

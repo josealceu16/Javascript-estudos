@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Funções</h1>
+    <script>
+        // declaração de função
+
+        function mundo() {
+            document.write("Olá, Mundo <br>")
+        }
+        mundo()
+
+        // expressões de função
+
+        const ola = function () {
+            console.log("Olá, usuário de function expression")
+        }
+        ola()
+
+        // 1º) arrow functions
+
+
+        const ola2 = () => {
+            console.log("Olá, você está usando uma arrow function")
+        }
+        ola2()
+
+        // funções que retornam valores. 
+
+        function dia_semana() {
+            return 6 // essa função está retornando o 6 (dia da semana que equivale ao número.)
+        }
+        let dia = dia_semana()
+        console.log(dia)
+
+        // atribuir valores a uma função
+
+        function soma(n1, n2) {
+            return n1 += n2
+        }
+        let somar = soma(3, 5) // atribui valores.
+        console.log(somar)
+
+    </script>
+</body>
+
+</html>
