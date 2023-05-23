@@ -14,34 +14,29 @@
         toda informação que vem do usuário é uma string-->
     <h1>Tabuada</h1>
     <button onclick="mostrartabuada()">Mostrar tabuada</button>
-    <button>Limpar tabuada</button>
+    <button onclick="clean()">Limpar tabuada</button>
     <div id="tabuada"></div>
     <script>
-        const numbers = document.getElementById("tabuada")
+        const output = document.getElementById("tabuada")
         function mostrartabuada() {
-            numbers.innerHTML = prompt("Digite um número...")
-            numbers = parseInt(numbers)
-            let num1 = 1;
-            while (num1 <= 1000) {
-                document.write(`${numbers} + ${num1} = ${(numbers + num1)}<br>  `)
-                num1++
+            let numbers = parseInt(prompt("Digite um número..."))
+            let msg = ""
+            for (let n = 1; n <= 1000; n++) {
+                msg += `${numbers} + ${n} = ${(numbers + n)}<br>`
             }
-            num1 = 1;
-            while (num1 <= 1000) {
-                document.write(`${numbers} - ${num1} = ${(numbers - num1)}<br>  `)
-                num1++
+            for (let n = 1; n <= 1000; n++) {
+                msg += `${numbers} - ${n} = ${(numbers - n)}<br>`
             }
-            num1 = 1;
-            while (num1 <= 1000) {
-                document.write(`${numbers} X ${num1} = ${(numbers * num1)}<br>  `)
-                num1++
+            for (let n = 1; n <= 1000; n++) {
+                msg += `${numbers} X ${n} = ${(numbers * n)}<br>`
             }
-            num1 = 1;
-            while (num1 <= 1000) {
-                document.write(`${numbers} / ${num1} = ${(numbers / num1)}<br>  `)
-                num1++
+            for (let n = 1; n <= 1000; n++) {
+                msg += `${numbers} / ${n} = ${(numbers / n)}<br>`
             }
-            console.log(mostrartabuada())
+            output.innerHTML = msg
+        }
+        function clean() {
+            document.getElementById('tabuada').innerHTML = "";
         }
     </script>
 </body>
